@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Plata — Banca Clara y Moderna</title>
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes Google: Plus Jakarta Sans & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos Phosphor / FontAwesome para enriquecer inputs y botones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+    <!-- BARRA SUPERIOR / TOPBAR -->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-vault"></i>
+            </div>
+            <span>Mi Plata</span>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="#productos">Productos</a>
+            <a href="#atencion">Atención al cliente</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+        <a class="login-link" href="index.html#ingreso" target="_blank" rel="noopener">
+            <i class="fa-solid fa-right-to-bracket"></i> Ingreso
+        </a>
+        <div class="topbar-actions" id="topbarActions"></div>
+    </header>
+
+    <!-- ===================== AUTENTICACIÓN ===================== -->
+    <main class="view" id="viewAuth">
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> La banca que va contigo</span>
+                <h1>Haz que tu plata <span class="accent">llegue más lejos.</span></h1>
+                <p>Administra tu dinero, revisa tus movimientos y toma decisiones con una cuenta pensada para tu día a día.</p>
+                <div class="hero-highlights">
+                    <span><i class="fa-solid fa-check"></i> Sin complicaciones</span>
+                    <span><i class="fa-solid fa-bolt"></i> Operaciones rápidas</span>
+                    <span><i class="fa-solid fa-lock"></i> Siempre protegida</span>
+                </div>
+                <div class="hero-stats" aria-label="Beneficios de Mi Plata">
+                    <div><strong>24/7</strong><span>Disponible</span></div>
+                    <div><strong>0%</strong><span>Enredos</span></div>
+                    <div><strong>100%</strong><span>Digital</span></div>
+                </div>
+            </div>
+            
+            <div class="hero-graphic" aria-hidden="true">
+                <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00D2FF"/>
+                            <stop offset="100%" stop-color="#00E676"/>
+                        </linearGradient>
+                        <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#1E293B"/>
+                            <stop offset="100%" stop-color="#0F172A"/>
+                        </linearGradient>
+                        <linearGradient id="chartFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#00E676" stop-opacity="0.35"/>
+                            <stop offset="100%" stop-color="#00E676" stop-opacity="0.0"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Tarjeta Mi Plata ilustrada -->
+                    <rect x="50" y="30" width="300" height="180" rx="20" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="2" class="floating-card"/>
+                    <text x="78" y="57" fill="#FFFFFF" font-size="14" font-family="Plus Jakarta Sans, sans-serif" font-weight="700">MI PLATA</text>
+                    
+                    <!-- Chip Tarjeta -->
+                    <rect x="85" y="70" width="42" height="32" rx="6" fill="#FACC15" opacity="0.85"/>
+                    <circle cx="295" cy="85" r="18" fill="#FF5252" opacity="0.8"/>
+                    <circle cx="315" cy="85" r="18" fill="#FFB300" opacity="0.8"/>
+
+                    <text x="82" y="145" fill="#CBD5E1" font-size="11" font-family="Plus Jakarta Sans, sans-serif">SALDO DISPONIBLE</text>
+                    <text x="82" y="166" fill="#FFFFFF" font-size="20" font-family="Space Grotesk, sans-serif" font-weight="700">$ 2.480.000</text>
+                    <!-- Línea de Tendencia Gráfica -->
+                    <path d="M 80 170 Q 140 120, 200 140 T 320 80 L 320 180 L 80 180 Z" fill="url(#chartFill)" />
+                    <path d="M 80 170 Q 140 120, 200 140 T 320 80" fill="none" stroke="url(#heroGrad1)" stroke-width="4" stroke-linecap="round"/>
+                    
+                    <!-- Puntos brillantes -->
+                    <circle cx="320" cy="80" r="7" fill="#00E676" class="pulse-glow"/>
+                    <circle cx="200" cy="140" r="5" fill="#00D2FF"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="benefits-strip" aria-label="Beneficios de la cuenta Mi Plata">
+            <article class="benefit-item">
+                <div class="benefit-icon blue"><i class="fa-solid fa-wallet"></i></div>
+                <div><strong>Tu dinero a la mano</strong><span>Consulta tu saldo en segundos.</span></div>
+            </article>
+            <article class="benefit-item">
+                <div class="benefit-icon green"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                <div><strong>Mueve tu plata fácil</strong><span>Consigna y retira cuando quieras.</span></div>
+            </article>
+            <article class="benefit-item">
+                <div class="benefit-icon purple"><i class="fa-solid fa-shield-heart"></i></div>
+                <div><strong>Cuenta protegida</strong><span>Control y seguridad en cada paso.</span></div>
+            </article>
+        </section>
+
+        <section class="products-section" id="productos">
+            <div class="section-heading">
+                <span class="eyebrow">Elige lo que necesitas</span>
+                <h2>Productos para cada meta</h2>
+                <p>Selecciona una opción y te llevaremos al formulario para crear tu cuenta.</p>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-icon blue"><i class="fa-solid fa-piggy-bank"></i></div>
+                    <h3>Cuenta de ahorros</h3>
+                    <p>Guarda tu dinero y hazlo crecer con disponibilidad todos los días.</p>
+                    <button class="btn btn-primary product-select" type="button" data-producto="Cuenta de ahorros">
+                        Abrir cuenta <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </article>
+                <article class="product-card">
+                    <div class="product-icon green"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Cuenta corriente</h3>
+                    <p>Administra tus pagos y operaciones frecuentes de forma sencilla.</p>
+                    <button class="btn btn-primary product-select" type="button" data-producto="Cuenta corriente">
+                        Abrir cuenta <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </article>
+                <article class="product-card">
+                    <div class="product-icon purple"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3>Tarjeta de crédito</h3>
+                    <p>Compra con respaldo y organiza tus gastos con seguridad.</p>
+                    <button class="btn btn-primary product-select" type="button" data-producto="Tarjeta de crédito">
+                        Solicitar tarjeta <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="auth-panel" id="ingreso">
+            <div class="auth-intro">
+                <span class="eyebrow">Tu espacio financiero</span>
+                <h2>Entra a Mi Plata</h2>
+                <p>Todo lo que necesitas para cuidar tus finanzas, en un solo lugar.</p>
+            </div>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login" type="button">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión
+                </button>
+                <button class="auth-tab" data-tab="register" type="button">
+                    <i class="fa-solid fa-user-plus"></i> Crear cuenta
+                </button>
+            </div>
+
+            <!-- Formulario Login -->
+            <form id="formLogin" class="auth-form" novalidate>
+                <label>
+                    <span>Nombre de usuario</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="loginNombre" autocomplete="username" placeholder="Ingresa tu usuario" required>
+                    </div>
+                </label>
+                <label>
+                    <span>Contraseña</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="loginContrasenia" autocomplete="current-password" placeholder="••••••••" required>
+                    </div>
+                </label>
+                <p class="field-error" id="loginError"></p>
+                <button type="submit" class="btn btn-primary btn-block">
+                    Entrar a mi cuenta <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <!-- Formulario Registro -->
+            <form id="formRegister" class="auth-form hidden" novalidate>
+                <label>
+                    <span>Producto que deseas abrir</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <select id="regProducto" required>
+                            <option value="Cuenta de ahorros">Cuenta de ahorros</option>
+                            <option value="Cuenta corriente">Cuenta corriente</option>
+                            <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+                        </select>
+                    </div>
+                </label>
+                <label>
+                    <span>Nombre completo</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-regular fa-id-card"></i>
+                        <input type="text" id="regNombre" placeholder="Ej: Ana María Gómez" required>
+                    </div>
+                </label>
+                <label>
+                    <span>Número de identificación</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <input type="text" id="regId" placeholder="Documento ID" required>
+                    </div>
+                </label>
+                <label>
+                    <span>Correo electrónico</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="regCorreo" placeholder="correo@ejemplo.com" required>
+                    </div>
+                </label>
+                <label>
+                    <span>Contraseña</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" id="regContrasenia" placeholder="Crea una clave segura" required>
+                    </div>
+                </label>
+                <label>
+                    <span>Repetir contraseña</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-shield-cat"></i>
+                        <input type="password" id="regContraseniaRepetir" placeholder="Confirma tu clave" required>
+                    </div>
+                </label>
+                <label>
+                    <span>Depósito inicial</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <input type="number" id="regSaldo" min="0" step="1000" placeholder="0" required>
+                    </div>
+                </label>
+                <p class="field-error" id="registerError"></p>
+                <button type="submit" class="btn btn-primary btn-block">
+                    Completar registro <i class="fa-solid fa-check"></i>
+                </button>
+                <p class="auth-hint"><i class="fa-solid fa-circle-info"></i> Registro exclusivo para clientes. Las cuentas para personal administrativo son gestionadas internamente.</p>
+            </form>
+        </section>
+
+        <section class="info-section" id="atencion">
+            <div class="info-icon"><i class="fa-solid fa-headset"></i></div>
+            <div>
+                <span class="eyebrow">Estamos para ayudarte</span>
+                <h2>Atención al cliente</h2>
+                <p>¿Tienes preguntas sobre nuestros productos? Escríbenos y recibe orientación para elegir la cuenta ideal.</p>
+                <a class="btn btn-ghost" href="mailto:soporte@miplata.com">Contactar soporte</a>
+            </div>
+        </section>
+
+        <section class="info-section" id="nosotros">
+            <div class="info-icon purple"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div>
+                <span class="eyebrow">Conoce Mi Plata</span>
+                <h2>Nosotros</h2>
+                <p>Somos una banca digital cercana, clara y segura, creada para que tomes el control de tu dinero.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== DASHBOARD USUARIO ===================== -->
+    <main class="view hidden" id="viewUsuario">
+        <section class="balance-hero">
+            <div class="balance-card-header">
+                <span class="balance-label"><i class="fa-solid fa-wallet"></i> Saldo disponible</span>
+                <span class="card-chip-tag">Debit Card</span>
+            </div>
+            <div class="balance-amount" id="usuarioSaldo">$0</div>
+            <div class="balance-footer">
+                <span><i class="fa-solid fa-circle-check"></i> Cuenta Activa</span>
+                <span class="brand-subtext">Mi Plata Digital</span>
+            </div>
+        </section>
+
+        <nav class="action-tabs">
+            <button class="action-tab active" data-action="retirar" type="button">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i> Retirar
+            </button>
+            <button class="action-tab" data-action="consignar" type="button">
+                <i class="fa-solid fa-arrow-down-to-bracket"></i> Consignar
+            </button>
+            <button class="action-tab" data-action="movimientos" type="button">
+                <i class="fa-solid fa-clock-rotate-left"></i> Movimientos
+            </button>
+        </nav>
+
+        <section class="action-panel" id="usuarioPanelRetirar">
+            <form id="formRetirar" novalidate>
+                <label>
+                    <span>Cantidad a retirar</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <input type="number" id="retirarMonto" min="1" step="1000" placeholder="0.00" required>
+                    </div>
+                </label>
+                <p class="field-error" id="retirarError"></p>
+                <button type="submit" class="btn btn-primary btn-block">Confirmar Retiro</button>
+            </form>
+        </section>
+
+        <section class="action-panel hidden" id="usuarioPanelConsignar">
+            <form id="formConsignar" novalidate>
+                <label>
+                    <span>Cantidad a consignar</span>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                        <input type="number" id="consignarMonto" min="1" step="1000" placeholder="0.00" required>
+                    </div>
+                </label>
+                <p class="field-error" id="consignarError"></p>
+                <button type="submit" class="btn btn-primary btn-block">Confirmar Consignación</button>
+            </form>
+        </section>
+
+        <section class="action-panel hidden" id="usuarioPanelMovimientos">
+            <ul class="movements-list" id="usuarioListaMovimientos"></ul>
+            <p class="empty-state" id="usuarioEmptyMovimientos">
+                <i class="fa-solid fa-receipt empty-icon"></i><br>
+                Aún no tienes movimientos. Cuando retires o consignes, aparecerán aquí.
+            </p>
+        </section>
+    </main>
+
+    <!-- ===================== PANEL CAJERO ===================== -->
+    <main class="view hidden" id="viewCajero">
+        <section class="action-panel">
+            <label class="section-title">Buscar cliente por nombre o ID</label>
+            <div class="search-bar">
+                <div class="input-icon-wrapper flex-grow">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="cajeroBusqueda" placeholder="Ej: Ana Torres o 1029384756">
+                </div>
+                <button class="btn btn-primary" id="btnBuscarCliente" type="button">Buscar</button>
+            </div>
+            <p class="field-error" id="cajeroBusquedaError"></p>
+
+            <div class="cliente-card hidden" id="clienteCard">
+                <div class="cliente-header">
+                    <div>
+                        <div class="cliente-nombre" id="clienteNombre"></div>
+                        <div class="cliente-estado" id="clienteEstado"></div>
+                    </div>
+                    <div class="cliente-saldo" id="clienteSaldo"></div>
+                </div>
+
+                <div class="cliente-acciones">
+                    <div class="fila">
+                        <input type="number" id="clienteMontoRetiro" min="1" step="1000" placeholder="Monto retiro">
+                        <button class="btn btn-ghost btn-sm" id="btnClienteRetirar" type="button">
+                            <i class="fa-solid fa-minus"></i> Retirar
+                        </button>
+                    </div>
+                    <div class="fila">
+                        <input type="number" id="clienteMontoConsignacion" min="1" step="1000" placeholder="Monto consignar">
+                        <button class="btn btn-ghost btn-sm" id="btnClienteConsignar" type="button">
+                            <i class="fa-solid fa-plus"></i> Consignar
+                        </button>
+                    </div>
+                </div>
+                <p class="field-error" id="clienteOperacionError"></p>
+            </div>
+        </section>
+
+        <section class="action-panel hidden" id="clienteMovimientosPanel">
+            <h3 style="margin-top:0"><i class="fa-solid fa-list-check"></i> Movimientos del cliente</h3>
+            <ul class="movements-list" id="clienteListaMovimientos"></ul>
+            <p class="empty-state" id="clienteEmptyMovimientos">
+                <i class="fa-solid fa-folder-open empty-icon"></i><br>
+                Este cliente aún no tiene movimientos registrados.
+            </p>
+        </section>
+    </main>
+
+    <!-- ===================== PANEL ADMINISTRADOR ===================== -->
+    <main class="view hidden" id="viewAdministrador">
+        <nav class="action-tabs">
+            <button class="action-tab active" data-admin-tab="resumen" type="button">
+                <i class="fa-solid fa-chart-pie"></i> Resumen
+            </button>
+            <button class="action-tab" data-admin-tab="usuarios" type="button">
+                <i class="fa-solid fa-users"></i> Usuarios
+            </button>
+            <button class="action-tab" data-admin-tab="cajeros" type="button">
+                <i class="fa-solid fa-user-tie"></i> Cajeros
+            </button>
+        </nav>
+
+        <section class="action-panel" id="adminPanelResumen">
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Usuarios registrados</div>
+                        <div class="stat-value" id="statUsuarios">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fa-solid fa-user-gear"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Cajeros activos</div>
+                        <div class="stat-value" id="statCajeros">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Saldo total en banco</div>
+                        <div class="stat-value" id="statSaldo">$0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Movimientos totales</div>
+                        <div class="stat-value" id="statMovimientos">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red"><i class="fa-solid fa-user-slash"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Usuarios bloqueados</div>
+                        <div class="stat-value" id="statBloqueados">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="action-panel hidden" id="adminPanelUsuarios" style="max-width:none">
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Identificación</th>
+                            <th>Saldo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaUsuarios"></tbody>
+                </table>
+            </div>
+            <p class="empty-state" id="usuariosEmpty">
+                <i class="fa-solid fa-users-slash empty-icon"></i><br>
+                Todavía no hay usuarios registrados.
+            </p>
+        </section>
+
+        <section class="action-panel hidden" id="adminPanelCajeros" style="max-width:none">
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Código</th>
+                            <th>Correo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCajeros"></tbody>
+                </table>
+            </div>
+            <p class="empty-state" id="cajerosEmpty">
+                <i class="fa-solid fa-user-minus empty-icon"></i><br>
+                Todavía no hay cajeros registrados.
+            </p>
+
+            <div class="crear-cajero-box">
+                <h4><i class="fa-solid fa-user-plus"></i> Registrar nuevo cajero</h4>
+                <form class="crear-cajero-form" id="formCrearCajero" novalidate>
+                    <label>Nombre <input type="text" id="cajeroNombre" placeholder="Ej: Carlos Páez" required></label>
+                    <label>Identificación <input type="text" id="cajeroId" placeholder="Documento ID" required></label>
+                    <label>Correo <input type="email" id="cajeroCorreo" placeholder="cajero@miflata.com" required></label>
+                    <label>Contraseña <input type="password" id="cajeroContrasenia" placeholder="••••••••" required></label>
+                    <label>Código empleado <input type="text" id="cajeroCodigo" placeholder="CJ-001" required></label>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Crear cajero</button>
+                </form>
+            </div>
+            <p class="field-error" id="crearCajeroError"></p>
+        </section>
+    </main>
+</div>
+
+<footer class="site-footer">
+    <div>
+        <strong><i class="fa-solid fa-vault"></i> Mi Plata</strong>
+        <p>Tu banca clara, moderna y siempre contigo.</p>
+    </div>
+    <div class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#atencion">Atención al cliente</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="mailto:soporte@miplata.com">soporte@miplata.com</a>
+    </div>
+    <small>© 2026 Mi Plata. Todos los derechos reservados.</small>
+</footer>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script type="module" src="Main.js"></script>
+</body>
+</html>
